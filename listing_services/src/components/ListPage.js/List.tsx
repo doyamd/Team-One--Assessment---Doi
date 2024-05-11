@@ -7,7 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Add from './Add';
+import CrudModal from '../CrudModal';
 import { useState } from 'react';
 
 function createData(
@@ -51,9 +51,9 @@ export default function List() {
               <TableCell align="right">{row.discription}</TableCell>
               <TableCell align="right">{row.price}</TableCell>
               <TableCell align="right"> <button onClick={() => setShowAdd(true)}>Edit</button>
-      {showAdd && <Add />}</TableCell>
+      {showAdd}</TableCell>
       <TableCell align="right"> <button onClick={() => setShowAdd(true)}>Delete</button>
-      {showAdd && <Add />}</TableCell>
+      {showAdd}</TableCell>
             </TableRow>
           ))}
         </TableBody>
