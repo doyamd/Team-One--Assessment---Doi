@@ -1,9 +1,10 @@
+"use client"
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button, Stack, Flex } from '@mantine/core';
-import { InputLabel, TextField } from '@mui/material';
+import { InputLabel, TextField } from '@mui/material';  
 
 export default function CrudModal() {
-    const [opened, { open, close }] = useDisclosure(false);
+    const [opened, { open, close }] = useDisclosure(true);
     
     const handlesave = () => {
         console.log('save')
